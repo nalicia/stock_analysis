@@ -111,7 +111,7 @@
   After the code successfully looped through the worksheet, I was able to compare the result output times. 
 The origional code for 2018 ran at 0.47 seconds. Our refractored code ran at 0.27 seconds. Thats nearly half of the time it took the first go around!
 [VBA_Challenge_2018.png.zip](https://github.com/nalicia/stock_analysis/files/7654996/VBA_Challenge_2018.png.zip)
-The code for 2017 was similar, Going from running at 0.49 seconds to running at 0.28 seconds! the power of refractoring data produces a m,uch fster result. 
+The code for 2017 was similar, Going from running at 0.49 seconds to running at 0.28 seconds! the power of refractoring data produces a much fster result. 
 Coincidentaly through this analysis we found that DQ would not be a viable option for steves parents as they dropped 62% from 2017 to 2018. the best option for Steves' parents would be either ENPH returing 81.9% or RUN returning 84% from 2017 to 2018. 
 [Refractored Stock Analysis 2017.zip](https://github.com/nalicia/stock_analysis/files/7654998/Refractored.Stock.Analysis.2017.zip)
 [Refractored Stock Analysis 2018.zip](https://github.com/nalicia/stock_analysis/files/7654999/Refractored.Stock.Analysis.2018.zip)
