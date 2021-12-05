@@ -1,7 +1,7 @@
 # Refactoring Stock Analysis
 ## Overview
   This week we learned how to analyze data using Visual Basic for Applications. The goal of this anlysis was to uncover the best company to invest stock in. To best assist Steve I created a macro in order to reveal which stocks did the best between 2017 and 2018. In addition to creating this Macro i refactored the script to improve the speed in which we get the results of the anlysis. Refactoring makes the code more efficient by looping through the code at a significantly faster rate. 
-## Results
+## Analysis
   In order to complete this anylsis I had to add and delete a bit of code to transition smoother through the data. I first had  initialize a variable that would pull the desired results from the macro. I used "Ticker Index". I created this to access the selected index across the arrays.  Next I created a list of arrays to store data from the data worksheets. The list includes "tickerVolumes, tickerStartingPrices as well as tickerEndingPrices." This allows the script to loop through our data, pulling out the desired values. 
 ### The refractored code
     Sub AllStockAnalysisRefractored()
@@ -107,6 +107,7 @@
         
     End Sub
 
+## Results
   After the code successfully looped through the worksheet, I was able to compare the result output times. 
 The origional code for 2018 ran at 0.47 seconds. Our refractored code ran at 0.27 seconds. Thats nearly half of the time it took the first go around!
 [VBA_Challenge_2018.png.zip](https://github.com/nalicia/stock_analysis/files/7654996/VBA_Challenge_2018.png.zip)
@@ -114,6 +115,9 @@ The code for 2017 was similar, Going from running at 0.49 seconds to running at 
 Coincidentaly through this analysis we found that DQ would not be a viable option for steves parents as they dropped 62% from 2017 to 2018. the best option for Steves' parents would be either ENPH returing 81.9% or RUN returning 84% from 2017 to 2018. 
 [Refractored Stock Analysis 2017.zip](https://github.com/nalicia/stock_analysis/files/7654998/Refractored.Stock.Analysis.2017.zip)
 [Refractored Stock Analysis 2018.zip](https://github.com/nalicia/stock_analysis/files/7654999/Refractored.Stock.Analysis.2018.zip)
-debugging cleaner transitioning code, cons are it can be trickjy using vba (Errirs
+## Summary
+There are many benefits to refractoring code. The biggest being improving effeciency and creating cleaner transitions between code blocks. The disadvantages to refractoring is if done incorrectly you can run into many errors that may take you a while to debug depending on the size of the data set. 
+For this analysis the refractored code did prodcue a much faster run time, however it didnt take too much longer than the origional. So I would deduce that it wasnt needed for this case specifically but I know with even larger data sets it can prove to be extremely handy. 
+
 
 
