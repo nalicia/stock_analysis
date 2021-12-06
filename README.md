@@ -79,7 +79,16 @@
         End If
     
     Next I
- 
+    Cells(4 + I, 1).Value = tickerIndex
+    Cells(4 + I, 2).Value = tickerVolumes
+    Cells(4 + I, 3).Value = tickerEndingPrices / tickerStartingPrices - 1
+    'Formatting
+      Worksheets("All Stocks Analysis").Activate
+      Range("A3:C3").Font.FontStyle = "Bold"
+      Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
+      Range("B4:B15").NumberFormat = "#,##0"
+      Range("C4:C15").NumberFormat = "0.0%"
+      
     Worksheets("All Stocks Analysis").Activate
     dataRowStart = 4
     dataRowEnd = 15
@@ -98,13 +107,7 @@
         
     endTime = Timer
         MsgBox "This code ran in " & (endTime - startTime) & "seconds for the year " & (yearValue)
-         'Formatting
-    Worksheets("All Stocks Analysis").Activate
-    Range("A3:C3").Font.FontStyle = "Bold"
-    Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
-    Range("B4:B15").NumberFormat = "#,##0"
-    Range("C4:C15").NumberFormat = "0.0%"
-        
+ 
     End Sub
 
 ## Results
@@ -114,7 +117,6 @@ The origional code for 2018 ran at 0.47 seconds. Our refractored code ran at 0.2
 The code for 2017 was similar, Going from running at 0.49 seconds to running at 0.28 seconds! the power of refractoring data produces a much fster result. 
 Coincidentaly through this analysis we found that DQ would not be a viable option for steves parents as they dropped 62% from 2017 to 2018. the best option for Steves' parents would be either ENPH returing 81.9% or RUN returning 84% from 2017 to 2018. 
 [Refractored Stock Analysis 2017.zip](https://github.com/nalicia/stock_analysis/files/7654998/Refractored.Stock.Analysis.2017.zip)
-[Refractored Stock Analysis 2018.zip](https://github.com/nalicia/stock_analysis/files/7654999/Refractored.Stock.Analysis.2018.zip)
 ## Summary
 There are many benefits to refractoring code. The biggest being improving effeciency and creating cleaner transitions between code blocks. The disadvantages to refractoring is if done incorrectly you can run into many errors that may take you a while to debug depending on the size of the data set. 
 For this analysis the refractored code did prodcue a much faster run time, however it didnt take too much longer than the origional. So I would deduce that it wasnt needed for this case specifically but I know with even larger data sets it can prove to be extremely handy. 
